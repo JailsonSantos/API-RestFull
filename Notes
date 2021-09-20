@@ -4,8 +4,9 @@ Projeto criado em Node + PostGree
 ### Criar o package.json (y - cria uma configuração padrão)
 npm init -y
 
-### Requisitos (dotenv, express, postgree sql, sequelize, validator)
+### Requisitos (dotenv, express, postgree sql ou Mysql, sequelize, validator)
 npm install dotenv express pg pg-hstore sequelize validator
+npm install mysql2
 
 ### Typescript (iniciar o typescript)
 tsc -- init
@@ -16,8 +17,49 @@ tsc -- init
 "outDir": "./dist",
 "moduleResolution": "node",
 
-### Istando os Tipos
+### Istando os Tipos (-D, desenvolvimento)
 - npm install -D @types/express @types/node @types/sequelize @types/validator
 
-#### 
+### CORS (errors)
+- npm install cors
+- npm install -D @types/cors
 
+### Planejando uma API 
+- CRUD para frases
+
+- POST /frases - Criar novas frases
+- GET /frases - Listar todas as frases
+- GET /frases/123 - Pegar informações de uma frase
+- PUT /frases/123 - Atualizar informações de uma frase
+- DELETE /frases/123 - Deletar uma frase
+- GET /frase/aleatoria - Pega uma frase aleatória
+
+### Criar o banco de dados
+- create database phrases;
+- use phrases;
+
+### Criar tabela
+create table phrases (
+id int not null auto_increment primary key,
+author varchar(100) null,
+txt text null
+);
+
+### Inserir dados na tabela
+insert into phrases (id, author, txt) values ("", "Niki Santos", "Adoro dinossauros e Liga da Justiça");
+insert into phrases (id, author, txt) values ("", "Nicolas Braga", "Pipoca doce é muito gostosa");
+insert into phrases (id, author, txt) values ("", "José Oliveira", "Sou muito lindo e gosto de namorar.");
+insert into phrases (id, author, txt) values ("", "Missilen Santos", "Gosto de academia e viagens");
+
+### Selecionar dados da tabela
+select * from phrases;
+
+
+### Status CODE
+- https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+
+- Respostas de informação (100-199),
+- Respostas de sucesso (200-299),
+- Redirecionamentos (300-399)
+- Erros do cliente (400-499)
+- Erros do servidor (500-599).
