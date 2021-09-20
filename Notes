@@ -1,0 +1,23 @@
+# API-RestFull
+Projeto criado em Node + PostGree
+
+### Criar o package.json (y - cria uma configuração padrão)
+npm init -y
+
+### Requisitos (dotenv, express, postgree sql, sequelize, validator)
+npm install dotenv express pg pg-hstore sequelize validator
+
+### Typescript (iniciar o typescript)
+tsc -- init
+
+-- Configurações a serem feitas no tsconfig.json
+"target": "es6",
+"rootDir": "./src",
+"outDir": "./dist",
+"moduleResolution": "node",
+
+### Istando os Tipos
+- npm install -D @types/express @types/node @types/sequelize @types/validator
+
+#### 
+
